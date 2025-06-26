@@ -1,8 +1,8 @@
 ## Description
-The `sql-validator.rkt` is a string validator for very basic SQL SELECT queries, written in Racket language (LISP) as a learning exrecise. It is not a true input scanner or a recursive descent parser, but rather a trivial regular validator. This is a personal learning exercise with notes, and there may be mistakes.
+The `sql-validator.rkt` is a simple string validator for SQL SELECT statements. It is written in Racket (a LISP dialect), and it is not a full input scanner or a recursive descent parser. It was created as part of a learning exercise and may contain mistakes.
 
-## Notes for writing LL grammar rules
-- The example below demonstrates how to convert a regular grammar, like the one shown in `sql-validator.rkt`, into a corresponding (context-free) LL1 grammar.
+## LL grammar (notes)
+- The example below demonstrates the conversion of a regular grammar, the one implemented in `sql-validator.rkt`, into a corresponding (context-free) LL1 grammar.
 - An LL grammar can be implemented with an LL push-down automaton, while a regular grammar can be implemented with a simple finite state machine.
 
 **The meaning of LL1:**
@@ -10,8 +10,12 @@ The `sql-validator.rkt` is a string validator for very basic SQL SELECT queries,
 - \_L\_ &nbsp; &nbsp; The leftmost variable is being expanded in each step.  
 - \_\_1 &nbsp; &nbsp; The next rule is determined by looking one symbol ahead (to the right).  
 
-### Example:
+### Example
 ```
+Both grammars start at the variable S and end after successfully reading
+the terminal symbol ";".  Uppercase letters represent variables, lowercase
+letters/words represent SQL symbols.
+
 The original regular grammar rules:
 S -> select A
 A -> all B | distinct B | distinctrow B | B
@@ -21,13 +25,11 @@ D -> , C | from E
 E -> table F
 F -> ;ε
 
-The corresponding LL1 grammar rules:
+The equivalent LL1 grammar rules:
 S -> sAft;
 A -> * | aB | cC
 B -> * | cC
 C -> ,cC | ε
-
-Both grammars start at the variable S, and end after successfuly reading the terminal symbol ";".
 
 Parse table:
 +----------+---+-----+---+--------------+--------+------+--------+-------+---+
