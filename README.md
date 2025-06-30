@@ -52,5 +52,3 @@ t - table name
 ; - query terminator
 ε - empty expansion in the LL1 grammar / end of input in the regular grammar
 ```
-
-Copyright (c) 2024 [beefy24](https://github.com/beefy24).
