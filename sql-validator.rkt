@@ -1,6 +1,6 @@
 #lang racket
 ;; 
-;; Copyright (c) 2024 beefy24 (https://github.com/beefy24).
+;; Author: beefy24 (https://github.com/beefy24), 2024.
 ;; 
 ;; ╔══════════════════════════════════════════════════════════════════════════════╗
 ;; ║ PROGRAM DESCRIPTION:                                                         ║
