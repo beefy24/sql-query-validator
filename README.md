@@ -1,7 +1,7 @@
-## Description
+### Description
 The `sql-validator.rkt` is a simple string validator for SQL SELECT statements. It is written in Racket (a LISP dialect), and it is not a full input scanner or a recursive descent parser. It was created as part of a learning exercise and may contain mistakes.
 
-## Notes
+### Notes
 - The example below demonstrates the conversion of a regular grammar, the one implemented in `sql-validator.rkt`, into a corresponding (context-free) LL1 grammar.
 - An LL grammar can be implemented with an LL push-down automaton, while a regular grammar can be implemented with a simple finite state machine.
 
@@ -10,7 +10,7 @@ The meaning of LL1:
 - \_L\_ &nbsp; &nbsp; The leftmost variable is being expanded in each step.  
 - \_\_1 &nbsp; &nbsp; The next rule is determined by looking one symbol ahead (to the right).  
 
-### Grammar
+#### Grammar
 ```
 Both grammars start at the variable S and end after successfully reading
 the terminal symbol ";".  Uppercase letters represent variables, lowercase
