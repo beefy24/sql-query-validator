@@ -1,4 +1,4 @@
-## sql-query-validator
+## SQL query validator
 This is a simple string validator for SQL SELECT statements. It is written in Racket (a LISP dialect), and it is not a full input scanner or a recursive descent parser. It was created as part of a learning exercise and may contain mistakes.
 
 ## Notes
