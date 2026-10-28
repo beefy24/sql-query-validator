@@ -16,7 +16,7 @@ Both grammars start at the variable S and end after successfully reading
 the terminal symbol ";".  Uppercase letters represent variables, lowercase
 letters/words represent SQL symbols.
 
-The original regular grammar rules:
+The original regular grammar (right linear) rules:
 S -> select A
 A -> all B | distinct B | distinctrow B | B
 B -> * form E | C
